@@ -52,9 +52,7 @@ export default function CartDisplay() {
     <Box mt={1} py={4}>
       <Container maxW='container.lg'>
         {cartItems.length === 0 ? (
-          <Box>
-            <EmptyCart />
-          </Box>
+          <EmptyCart />
         ) : (
           <>
             <Flex justifyContent={['space-between', 'center']} mt={2} mb={4}>
@@ -65,7 +63,7 @@ export default function CartDisplay() {
             </Flex>
             <Flex
               flexDirection={{ base: 'column', md: 'row' }}
-              justifyContent= 'space-between'
+              justifyContent='space-between'
               borderBottom={['0px', '1px']}
               borderColor={['none', 'grey.400']}
             >

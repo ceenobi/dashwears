@@ -16,7 +16,7 @@ export default function SocialMedia() {
     <Box mt={1} py={4}>
       <Container maxW='container.lg'>
         <Stack
-          direction={['column', 'row']}
+          direction={['column', 'column', 'row']}
           justify={['space-between']}
           align='center'
         >

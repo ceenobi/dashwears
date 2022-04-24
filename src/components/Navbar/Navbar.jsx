@@ -16,8 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { FaShoppingCart} from 'react-icons/fa'
 import { MdDarkMode, MdLightMode, MdArrowDropDown } from 'react-icons/md'
-import { BsFillUnlockFill } from 'react-icons/bs'
-// import { BsFillPencilFill } from 'react-icons/bs'
+import { BsFillUnlockFill, BsFillPencilFill } from 'react-icons/bs'
 import { NavLink, useNavigate } from 'react-router-dom'
 import DrawerBar from './Drawer'
 import { useSelector, useDispatch } from 'react-redux'
@@ -55,17 +54,8 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
         px='4'
         display={{ base: 'none', md: 'block' }}
       >
-        <Flex
-          alignItems='center'
-          maxW={{
-            base: 'none',
-            md: 'container.lg',
-            lg: 'container.md',
-            xl: 'container.lg',
-          }}
-          m='auto'
-        >
-          <HStack spacing={4}>
+        <Flex alignItems='center' maxW='container.lg' m='auto'>
+          <HStack spacing={1}>
             <Button bg='none' size='sm' as={NavLink} to='/customercare'>
               Customer Care
             </Button>
@@ -75,7 +65,7 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
           </HStack>
           <Spacer />
           <HStack>
-            <Text textStyle='y'>
+            <Text textStyle='y' textTransform='uppercase'>
               Free Standard Shipping on orders over 1000
             </Text>
           </HStack>
@@ -99,33 +89,25 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
               </MenuList>
             </Menu>
           ) : (
-            <HStack spacing={4}>
-              {/* <Button
+            <HStack spacing={1}>
+              <Button
                 leftIcon={<BsFillPencilFill />}
                 bg='none'
                 size='sm'
                 as={NavLink}
-                to='/register'
+                to='/the'
               >
-                Register
-              </Button> */}
+                Blog
+              </Button>
               <Login />
             </HStack>
           )}
         </Flex>
       </Box>
-      <Box
-        maxW={{
-          base: 'none',
-          md: 'container.lg',
-          lg: 'container.md',
-          xl: 'container.lg',
-        }}
-        m='auto'
-        px={2}
-      >
+      <Box maxW='container.lg' m='auto' px={2}>
         <Flex alignItems='center' p={{ base: '1', md: '4', lg: '0' }}>
           <DrawerBar />
+          <Spacer display={{ base: 'block', md: 'none' }} />
           <HStack
             alignItems='center'
             spacing={4}
@@ -145,7 +127,7 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
             </Text>
           </HStack>
           <Spacer />
-          <Spacer display={{ base: 'block', md: 'block' }} />
+          <Spacer display={{ base: 'none', sm: 'block' }} />
           <Flex>
             <Text
               textStyle='h1'
@@ -158,11 +140,10 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
             </Text>
           </Flex>
           <Spacer />
-          <Spacer display={{ base: 'none', md: 'block' }} />
+          <Spacer display={{ base: 'none', sm: 'block' }} />
 
-          <HStack spacing={{ base: '3', md: '6' }}>
+          <HStack spacing={{ base: '2', md: '10' }}>
             <Search />
-
             <Flex>
               <Icon
                 as={FaShoppingCart}
@@ -175,7 +156,6 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
                 {cartItems.length}
               </Badge>
             </Flex>
-
             <IconButton
               size={'sm'}
               icon={colorMode === 'light' ? <MdDarkMode /> : <MdLightMode />}

@@ -71,7 +71,7 @@ export default function FooterLinks() {
     <Box mt={1} py={4} borderBottom='1px' bg={bg}>
       <Container maxW='container.lg'>
         <Flex
-          flexDirection={['column', 'row']}
+          flexDirection={['column', 'column', 'row']}
           justify='space-between'
           textAlign='center'
         >

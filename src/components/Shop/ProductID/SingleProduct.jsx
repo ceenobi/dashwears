@@ -64,6 +64,7 @@ export default function SingleProduct() {
     error: errorReview,
     success: successReview,
   } = productReview
+
   const productList = useSelector((state) => state.productList)
   const { products } = productList
 

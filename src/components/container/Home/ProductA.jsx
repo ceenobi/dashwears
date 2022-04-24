@@ -9,12 +9,13 @@ import {
   Text,
   Flex,
   Container,
+  Center,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { gallery } from '../../Helpers'
 import SubHeading from '../../SubComponents/SubHeading'
 
-export default function ProductA({color}) {
+export default function ProductA({ color }) {
   return (
     <Box mt={20}>
       <Container maxW='container.lg'>
@@ -30,7 +31,9 @@ export default function ProductA({color}) {
           mt={20}
         >
           <Box mb={4}>
-            <Image src={gallery[1]} alt='bag' boxSize='400px' />
+            <Center>
+              <Image src={gallery[1]} alt='bag' boxSize='400px' />
+            </Center>
             <VStack alignItems='center' spacing={4} my={6}>
               <SubHeading title='Sale: up to 50% off' />
               <Text textStyle='y'>Don't miss out!</Text>
@@ -102,7 +105,9 @@ export default function ProductA({color}) {
             </Flex>
           </Flex>
           <Box>
-            <Image src={gallery[2]} alt='shirt' boxSize='400px' />
+            <Center>
+              <Image src={gallery[2]} alt='shirt' boxSize='400px' />
+            </Center>
             <VStack alignItems='center' spacing={4} my={6}>
               <SubHeading title='Less is more' />
               <Text textStyle='y' textAlign='center'>
