@@ -24,7 +24,7 @@ import { getOrderDetails, payOrder } from '../../../Redux/Actions/OrderActions'
 import moment from 'moment'
 import Loading from '../../SubComponents/Spinner'
 import Message from '../../SubComponents/Error'
-import axios from 'axios'
+import * as api from '../../../api/index.js'
 import { ORDER_PAY_RESET } from '../../../Redux/Constants/actionTypes'
 
 export default function Order() {
@@ -55,7 +55,7 @@ export default function Order() {
       }
     } else {
       const addPayPalScript = async () => {
-        const { data: clientId } = await axios.get('/config/paypal')
+        const { data: clientId } = await api.orderPaypalButton()
         paypalDispatch({
           type: 'resetOptions',
           value: { 'client-id': clientId, currency: 'USD' },

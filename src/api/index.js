@@ -26,3 +26,6 @@ export const orderHistoryId = (config) => API.get(`/orders`, config)
 
 //mailinglist
 export const mailRegister = (email, gender) => API.post(`/mailorder`, email, gender)
+
+//get paypal button
+export const orderPaypalButton = (config) => API.get(`/config/paypal`)
