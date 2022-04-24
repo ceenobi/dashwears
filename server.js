@@ -22,7 +22,7 @@ app.use('/products', productRoute)
 app.use('/users', userRoute)
 app.use('/orders', orderRoute)
 app.use('/mailorder', mailRoute)
-app.get('/api/config/paypal', (req, res) => {
+app.get('/config/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb')
 })
 
