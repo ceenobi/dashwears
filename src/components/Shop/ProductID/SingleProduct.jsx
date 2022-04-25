@@ -141,7 +141,7 @@ export default function SingleProduct() {
               xl: 'repeat(2, 1fr)',
               base: 'repeat(1, 1fr)',
             }}
-            gap={10}
+            gap={6}
             justify='space-between'
           >
             <Box>

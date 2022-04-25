@@ -12,14 +12,14 @@ import {
   Icon,
 } from '@chakra-ui/react'
 import {
-  googleLogin,
+  // googleLogin,
   login,
   registerUser,
 } from '../../../Redux/Actions/UserActions'
 
 import Message from '../../SubComponents/Error'
 import Loading from '../../SubComponents/Spinner'
-import { GoogleLogin } from 'react-google-login'
+// import { GoogleLogin } from 'react-google-login'
 import { useForm, FormProvider } from 'react-hook-form'
 import FormInput from './Auth/FormInput'
 import registerOptions from './Auth/InputValidation'
@@ -70,20 +70,20 @@ export default function SignIn() {
     setIsSignup((prevIsSignup) => !prevIsSignup)
   }
 
-  const googleSuccess = async (res) => {
-    const result = res?.profileObj
-    const token = res?.tokenId
-    try {
-      dispatch(googleLogin(result, token))
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // const googleSuccess = async (res) => {
+  //   const result = res?.profileObj
+  //   const token = res?.tokenId
+  //   try {
+  //     dispatch(googleLogin(result, token))
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
-  const googleFailure = (error) => {
-    console.log(error)
-    console.log('Google sign in failed. Try again later')
-  }
+  // const googleFailure = (error) => {
+  //   console.log(error)
+  //   console.log('Google sign in failed. Try again later')
+  // }
 
   return (
     <Box mt={1} py={4} mb={6}>
@@ -150,7 +150,7 @@ export default function SignIn() {
           >
             {isSignup ? 'Sign Up' : 'Sign In'}
           </Button>
-          <GoogleLogin
+          {/* <GoogleLogin
             clientId='514422940912-frhq8vmv41h7tm7qrkh25e6t8v3kse1f.apps.googleusercontent.com'
             render={(renderProps) => (
               <Button
@@ -165,7 +165,7 @@ export default function SignIn() {
             onSuccess={googleSuccess}
             onFailure={googleFailure}
             cookiePolicy='single_host_origin'
-          />
+          /> */}
         </form>
         <Box onClick={switchMode}>
           {isSignup ? (
