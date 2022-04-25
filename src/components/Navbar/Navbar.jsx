@@ -13,6 +13,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Center
 } from '@chakra-ui/react'
 import { FaShoppingCart} from 'react-icons/fa'
 import { MdDarkMode, MdLightMode, MdArrowDropDown } from 'react-icons/md'
@@ -65,7 +66,7 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
           </HStack>
           <Spacer />
           <HStack>
-            <Text textStyle='y' textTransform='uppercase'>
+            <Text textStyle='y' textTransform='uppercase' textAlign='center'>
               Free Standard Shipping on orders over 1000
             </Text>
           </HStack>
@@ -128,20 +129,21 @@ const Navbar = ({ bg, color, colorMode, toggleColorMode }) => {
           </HStack>
           <Spacer />
           <Spacer display={{ base: 'none', sm: 'block' }} />
-          <Flex>
-            <Text
-              textStyle='h1'
-              as={NavLink}
-              to='/'
-              size='lg'
-              color='paint.300'
-            >
-              DASH
-            </Text>
-          </Flex>
+          <Center>
+            <Flex>
+              <Text
+                textStyle='h1'
+                as={NavLink}
+                to='/'
+                size='lg'
+                color='paint.300'
+              >
+                DASH
+              </Text>
+            </Flex>
+          </Center>
           <Spacer />
           <Spacer display={{ base: 'none', sm: 'block' }} />
-
           <HStack spacing={{ base: '2', md: '10' }}>
             <Search />
             <Flex>

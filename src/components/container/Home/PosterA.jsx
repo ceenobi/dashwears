@@ -16,7 +16,7 @@ export default function PosterA() {
             xl: 'repeat(3, 1fr)',
             base: 'repeat(1, 1fr)',
           }}
-          gap={3}
+          gap={6}
         >
           <Box>
             <Image src={gallery[3]} alt='watch' w='100%' />
