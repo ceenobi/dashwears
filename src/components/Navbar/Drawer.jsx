@@ -70,7 +70,7 @@ export default function DrawerBar() {
         h={5}
         onClick={isOpen ? onClose : onOpen}
         variant='unstyled'
-        display={{ md: 'none' }}
+        display={{ lg: 'none' }}
       />
 
       <Drawer placement={'left'} onClose={onClose} isOpen={isOpen} size='full'>

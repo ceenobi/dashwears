@@ -4,7 +4,6 @@ import {
   Container,
   Stack,
   Text,
-  Flex,
   Icon,
   FormControl,
   Radio,
@@ -14,6 +13,7 @@ import {
   useColorModeValue,
   Center,
   useToast,
+  Grid
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -70,17 +70,22 @@ export default function FooterLinks() {
   return (
     <Box mt={1} py={4} borderBottom='1px' bg={bg}>
       <Container maxW='container.lg'>
-        <Flex
-          flexDirection={['column', 'column', 'row']}
-          justify='space-between'
-          textAlign='center'
+        <Grid
+          templateColumns={{
+            sm: 'repeat(1, 1fr)',
+            md: 'repeat(5, 1fr)',
+            lg: 'repeat(5, 1fr)',
+            xl: 'repeat(5, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={4}
         >
-          <Stack direction='column' spacing='10px' p={5}>
+          <Stack direction='column' spacing='10px' p={3}>
             <Box align='center' mb={2}>
               <SubHeading title='New to Dash' />
               <Icon as={AiOutlineDash} w={6} />
             </Box>
-            <Stack direction='column' spacing='10px' align='center'>
+            <Stack direction='column' spacing='10px' textAlign='center'>
               <Text textStyle='y' as={Link} to='/#'>
                 Shopping guide
               </Text>
@@ -92,12 +97,12 @@ export default function FooterLinks() {
               </Text>
             </Stack>
           </Stack>
-          <Stack direction='column' spacing='10px' p={5}>
+          <Stack direction='column' spacing='10px' p={3}>
             <Box align='center' mb={2}>
               <SubHeading title='Help' />
               <Icon as={AiOutlineDash} w={6} />
             </Box>
-            <Stack direction='column' spacing='10px' align='center'>
+            <Stack direction='column' spacing='10px' textAlign='center'>
               <Text textStyle='y' as={Link} to='/#'>
                 Shopping times & cost
               </Text>
@@ -116,10 +121,10 @@ export default function FooterLinks() {
             <Stack
               direction='column'
               spacing='10px'
-              p={5}
               w='300px'
               bg={bgA}
               color={colorA}
+              p={3}
             >
               <Box align='center' mb={2}>
                 <Icon as={AiFillMail} w={6} h={8} />
@@ -184,12 +189,12 @@ export default function FooterLinks() {
             </Stack>
           </Center>
 
-          <Stack direction='column' spacing='10px' p={5}>
+          <Stack direction='column' spacing='10px' p={3}>
             <Box align='center' mb={2}>
               <SubHeading title='My Dash' />
               <Icon as={AiOutlineDash} w={6} />
             </Box>
-            <Stack direction='column' spacing='10px' align='center'>
+            <Stack direction='column' spacing='10px' textAlign='center'>
               <Text textStyle='y' as={Link} to='/auth'>
                 Login
               </Text>
@@ -204,12 +209,12 @@ export default function FooterLinks() {
               </Text>
             </Stack>
           </Stack>
-          <Stack direction='column' spacing='10px' p={5}>
+          <Stack direction='column' spacing='10px' p={3}>
             <Box align='center' mb={2}>
               <SubHeading title='Help' />
               <Icon as={AiOutlineDash} w={6} />
             </Box>
-            <Stack direction='column' spacing='10px' align='center'>
+            <Stack direction='column' spacing='10px' textAlign='center'>
               <Text textStyle='y' as={Link} to='/#'>
                 Company info
               </Text>
@@ -224,7 +229,7 @@ export default function FooterLinks() {
               </Text>
             </Stack>
           </Stack>
-        </Flex>
+        </Grid>
       </Container>
     </Box>
   )

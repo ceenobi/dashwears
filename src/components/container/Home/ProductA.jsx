@@ -28,7 +28,6 @@ export default function ProductA({ color }) {
             base: 'repeat(1, 1fr)',
           }}
           gap={0}
-          mt={20}
         >
           <Box mb={4}>
             <Center>

@@ -6,7 +6,7 @@ import SubHeading from '../../SubComponents/SubHeading'
 
 export default function PosterA() {
   return (
-    <Box py={10} mt={'20'}>
+    <Box py={10} mt={'10'}>
       <Container maxW='container.xl' mt={10}>
         <Grid
           templateColumns={{

@@ -60,7 +60,7 @@ export default function SliderA() {
               View all
             </Text>
           </Box>
-          <Box
+          <Flex
             maxW={{ base: '100%', md: '65%' }}
             display='flex'
             flex='1'
@@ -93,9 +93,9 @@ export default function SliderA() {
                     </Box>
                   ))}
                 </Box>
-                <Box
+                <Flex
                   width='100%'
-                  display='flex'
+                  display={{ base: 'none', lg: 'block' }}
                   justifyContent='space-between'
                   alignItems='center'
                   py={1}
@@ -104,28 +104,28 @@ export default function SliderA() {
                 >
                   <Icon
                     as={BsArrowLeftShort}
-                    fontSize={{ base: '4xl', md: '5xl' }}
+                    fontSize={{ base: '2xl', md: '3xl' }}
                     color='paint.600'
                     cursor='pointer'
                     bgColor='paint.500'
                     borderRadius='25px'
                     onClick={() => scroll('left')}
-                    style={{ transform: 'translateX(-12px)' }}
+                    style={{ transform: 'translateX(-10px)' }}
                   />
                   <Icon
                     as={BsArrowRightShort}
-                    fontSize={{ base: '4xl', md: '5xl' }}
+                    fontSize={{ base: '2xl', md: '3xl' }}
                     color='paint.600'
                     cursor='pointer'
                     bgColor='paint.500'
                     borderRadius='25px'
                     onClick={() => scroll('right')}
-                    style={{ transform: 'translateX(12px)' }}
+                    style={{ transform: 'translateX(10px)' }}
                   />
-                </Box>
+                </Flex>
               </>
             )}
-          </Box>
+          </Flex>
         </Flex>
       </Container>
     </Box>
