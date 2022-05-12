@@ -34,11 +34,12 @@ export default function SliderA() {
   return (
     <Box mt={'20'}>
       <Container maxW='container.xl'>
-        <Flex
+        <Box
           pt={8}
           pb={4}
           pl={4}
           flexDirection={{ base: 'column', md: 'row' }}
+          display='flex'
         >
           <Box
             display={'flex'}
@@ -60,11 +61,12 @@ export default function SliderA() {
               View all
             </Text>
           </Box>
-          <Flex
+
+          <Box
             maxW={{ base: '100%', md: '65%' }}
             display='flex'
             flex='1'
-            // flexDirection='row'
+            //flexDirection='row'
             position='relative'
             my={{ base: 5, lg: 0 }}
           >
@@ -93,40 +95,43 @@ export default function SliderA() {
                     </Box>
                   ))}
                 </Box>
-                <Flex
-                  width='100%'
+                <Box
                   display={{ base: 'none', lg: 'block' }}
-                  justifyContent='space-between'
-                  alignItems='center'
-                  py={1}
                   position='absolute'
                   bottom='40%'
+                  width='100%'
                 >
-                  <Icon
-                    as={BsArrowLeftShort}
-                    fontSize={{ base: '2xl', md: '3xl' }}
-                    color='paint.600'
-                    cursor='pointer'
-                    bgColor='paint.500'
-                    borderRadius='25px'
-                    onClick={() => scroll('left')}
-                    style={{ transform: 'translateX(-10px)' }}
-                  />
-                  <Icon
-                    as={BsArrowRightShort}
-                    fontSize={{ base: '2xl', md: '3xl' }}
-                    color='paint.600'
-                    cursor='pointer'
-                    bgColor='paint.500'
-                    borderRadius='25px'
-                    onClick={() => scroll('right')}
-                    style={{ transform: 'translateX(10px)' }}
-                  />
-                </Flex>
+                  <Flex
+                    justifyContent='space-between'
+                    alignItems='center'
+                    py={1}
+                  >
+                    <Icon
+                      as={BsArrowLeftShort}
+                      fontSize={{ base: '2xl', md: '3xl' }}
+                      color='paint.600'
+                      cursor='pointer'
+                      bgColor='paint.500'
+                      borderRadius='25px'
+                      onClick={() => scroll('left')}
+                      style={{ transform: 'translateX(-10px)' }}
+                    />
+                    <Icon
+                      as={BsArrowRightShort}
+                      fontSize={{ base: '2xl', md: '3xl' }}
+                      color='paint.600'
+                      cursor='pointer'
+                      bgColor='paint.500'
+                      borderRadius='25px'
+                      onClick={() => scroll('right')}
+                      style={{ transform: 'translateX(10px)' }}
+                    />
+                  </Flex>
+                </Box>
               </>
             )}
-          </Flex>
-        </Flex>
+          </Box>
+        </Box>
       </Container>
     </Box>
   )
